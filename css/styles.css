@@ -1,0 +1,12 @@
+.box{
+	width: 50%;
+	height: 50%;
+	background-color: #fff;
+	padding: 30px;
+	margin: 70px 0 50px 25%;
+	border-radius: 10px;
+}
+
+.login {
+  background: linear-gradient(to bottom, #C62828 0%, #F6F1F1 100%);
+}
