@@ -10,3 +10,8 @@
 .login {
   background: linear-gradient(to bottom, #C62828 0%, #F6F1F1 100%);
 }
+
+.btn:hover {
+	color: #C62828;
+	font-weight: bold;
+}
