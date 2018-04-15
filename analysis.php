@@ -7,27 +7,34 @@
 
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
 <body style="background-color: #F6F1F1">
 
   <nav class="" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="index.html" class="brand-logo white-text"><h4>HAEMATOLOGY</h4></a>
+      <a id="logo-container" href="index.php" class="brand-logo white-text"><h4>HAEMATOLOGY</h4></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="test.html">New Test</a></li>
-        <li><a href="analysis.html">Analysis</a></li>
-        <li><a href="login.html">Logout</a></li>
+        <li><a href="dashboard.php">New Test</a></li>
+        <li><a href="analysis.php">Analysis</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="test.html">New Test</a></li>
-        <li><a href="analysis.html">Analysis</a></li>
-        <li><a href="login.html">Logout</a></li>
+        <li><a href="dashboard.php">New Test</a></li>
+        <li><a href="analysis.php">Analysis</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">&#xE5D2;</i></a>
     </div>
   </nav>
+
+  <div class="search-wrapper card">
+    <i class="material-icons prefix">&#xE8B6;</i>
+    <input id="search" placeholder="   search" name="search">
+  </div>
+
 
   <h1>Analysis page</h1>
 
