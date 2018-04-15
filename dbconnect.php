@@ -3,7 +3,7 @@
 $dbhost = "127.0.0.1";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "haematology";
+$dbname = "haematoloji";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 if (mysqli_connect_errno()) {
 	die("error to connect to database : ".mysqli_connect_errno());

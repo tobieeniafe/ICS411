@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+// error_reporting(0);
 include 'dbconnect.php';
 session_start();
 if ($_SESSION['haematology']) {
@@ -88,8 +88,8 @@ if ($_POST) {
   $password = $_POST['password'];
   $username = stripslashes($username);
   $password = stripslashes($password);
-  $username = mysql_real_escape_string($username);
-  $password = mysql_real_escape_string($password);
+  $username = mysqli_real_escape_string($username);
+  $password = mysqli_real_escape_string($password);
 
   $query = "SELECT * from users where username='$username' and password='$password'";
   $result = mysqli_query($conn,$query);
