@@ -46,7 +46,7 @@ if (!$_SESSION['haematology']) {
       =======================-->
 
     <h3 class="center">Haematology Request Form</h3>
-
+<form method="post" action="test_upload.php">
     <div class="row">
       <div class="col m3">
         <label>SURNAME</label>
@@ -62,7 +62,7 @@ if (!$_SESSION['haematology']) {
       </div>
       <div class="col m1">
         <label>SEX</label>
-        <select>
+        <select name="sex">
           <option value="m">M</option>
           <option value="f">F</option>
         </select>
@@ -280,7 +280,7 @@ if (!$_SESSION['haematology']) {
     <div class="row center">
       <button class="btn">submit</button>
     </div>
-
+</form>
     <!--  ====================
       container end 
       =======================-->

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2018 at 01:21 AM
+-- Generation Time: Apr 16, 2018 at 02:53 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -37,7 +37,7 @@ CREATE TABLE `requests` (
   `investigation_required` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `clinical_details` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `consultant` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date_1` date NOT NULL,
   `anisocytosis` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `target_cells` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `poikilocytosis` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -62,9 +62,15 @@ CREATE TABLE `requests` (
   `lab_number` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `med_lab_scientist` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `haematologist` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `date_2` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `requests`
+--
+
+INSERT INTO `requests` (`id`, `surname`, `firstname`, `age`, `sex`, `ward`, `hospital_number`, `investigation_required`, `clinical_details`, `consultant`, `date_1`, `anisocytosis`, `target_cells`, `poikilocytosis`, `sickle_cells`, `microcytosis`, `plai`, `macrocytosis`, `esr`, `hypochromia`, `nucleated_rbc`, `polychromasia`, `others`, `blast`, `promyel`, `myel`, `metamyel`, `nelit`, `lymph`, `mono`, `eosin`, `baso`, `lab_number`, `med_lab_scientist`, `haematologist`, `date_2`) VALUES
+(1, 'doe', 'john', '33', 'm', 'ward 4', '2011', 'none', 'clinical details', 'Dr. Ali', '2018-04-16', 'qq', 'ww', '   eee', 'rr', 'tt', 'yy', 'uu', 'ii', 'oo', 'ssss', 'pp', 'hthuuu', 'dd', 'ff', ' gg', 'hh', 'jj', 'kk', 'll', 'zz', '  xx', '44', 'Dr Sola', 'Dr Feranmi', '2018-04-17');
 
 -- --------------------------------------------------------
 
@@ -109,7 +115,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --
