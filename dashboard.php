@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 include 'dbconnect.php';
 session_start();
 if (!$_SESSION['haematology']) {
@@ -27,13 +27,13 @@ if (!$_SESSION['haematology']) {
       <a id="logo-container" href="index.php" class="brand-logo white-text"><h4>HAEMATOLOGY</h4></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="dashboard.php">New Test</a></li>
-        <li><a href="analysis.php">Analysis</a></li>
+        <li><a href="analysis.php">Search</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="dashboard.php">New Test</a></li>
-        <li><a href="analysis.php">Analysis</a></li>
+        <li><a href="analysis.php">Search</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">&#xE5D2;</i></a>
