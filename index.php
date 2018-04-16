@@ -86,14 +86,10 @@ if ($_SESSION['haematology']) {
 if ($_POST) {
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $username = stripslashes($username);
-  $password = stripslashes($password);
-  $username = mysqli_real_escape_string($username);
-  $password = mysqli_real_escape_string($password);
 
   $query = "SELECT * from users where username='$username' and password='$password'";
   $result = mysqli_query($conn,$query);
-    if (mysqli_num_rows($result) == 1) {
+    if (mysqli_num_rows($result) > 0) {
       session_start();
       $_SESSION['haematology'] = $username;
       header('location: dashboard.php');

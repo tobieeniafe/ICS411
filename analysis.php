@@ -5,6 +5,7 @@ session_start();
 if (!$_SESSION['haematology']) {
   header('location:index.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,14 +40,49 @@ if (!$_SESSION['haematology']) {
     </div>
   </nav>
 
+<form action="" method="GET">
   <div class="search-wrapper card">
     <i class="material-icons prefix">&#xE8B6;</i>
     <input id="search" placeholder="   search" name="search">
   </div>
-
+</form>
 
   <h1>Analysis page</h1>
+  <div class="container">
+    <table>
+        <thead>
+          <tr>
+              <th>Surname</th>
+              <th>Ward/Clinic</th>
+              <th>Age</th>
+              <th>Consultant</th>
+              <th>haematologist</th>
+              <th>hospital number</th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <?php 
+          if (isset($_GET['search'])) {
+            $search = $_GET['search'];
+            $query = "SELECT * FROM requests WHERE surname like '%$search%' or ward like '%$search%' or hospital_number like '%$search%'";
+          }else{
+ $query = "SELECT * FROM requests";
+}
+  $result = mysqli_query($conn,$query);
+          while ($data = mysqli_fetch_assoc($result)) {?>
+          <tr>
+            <td><?php echo $data['surname']; ?></td>
+            <td><?php echo $data['ward']; ?></td>
+            <td><?php echo $data['age']; ?></td>
+            <td><?php echo $data['consultant']; ?></td>
+            <td><?php echo $data['haematologist']; ?></td>
+            <td><?php echo $data['hospital_number']; ?></td>
+          </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+  </div>
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">

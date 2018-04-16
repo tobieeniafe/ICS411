@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 include 'dbconnect.php';
 session_start();
 if ($_SESSION['haematology']) {
@@ -84,10 +84,6 @@ if (isset($_POST["submit"])) {
  
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $username = stripslashes($username);
-  $password = stripslashes($password);
-  $username = mysqli_real_escape_string($username);
-  $password = mysqli_real_escape_string($password);
 
   $query = "INSERT INTO users (`username`, `password`) VALUES ('$username','$password')";
 
